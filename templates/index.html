@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Thomas Wilhoite{% endblock %}
+
+{% block welcome_splash %}
+<!-- Welcome Splash Screen -->
+<div id="welcome-splash" class="welcome-splash">
+    <div class="welcome-content">
+        <h1 class="welcome-message">I'm happy you're here!</h1>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Hello, I'm Thomas Wilhoite</h1>
+            <p class="hero-intro">I'm a Master of Science in Information Systems (MSIS) student at the Kelley School of Business, where I blend research, analytics, and systems thinking to solve complex problems and create meaningful connections.</p>
+            <div class="hero-buttons">
+                <a href="{{ url_for('projects') }}" class="btn btn-primary">View Projects</a>
+                <a href="{{ url_for('resume') }}" class="btn btn-secondary">See Resume</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-carousel">
+                <img src="{{ url_for('static', filename='images/Headshot.jpeg') }}" alt="Professional headshot of Thomas Wilhoite, a graduate student in Information Systems, wearing business attire" class="profile-image active" data-index="0">
+                <img src="{{ url_for('static', filename='images/IMG_5533.jpeg') }}" alt="Thomas Wilhoite in a casual setting, showing personality and approachability" class="profile-image" data-index="1">
+                <img src="{{ url_for('static', filename='images/IMG_6441.jpeg') }}" alt="Thomas Wilhoite in another personal moment, demonstrating authenticity and character" class="profile-image" data-index="2">
+            </div>
+            <div class="carousel-indicators">
+                <button class="carousel-dot active" data-index="0" aria-label="Show professional headshot"></button>
+                <button class="carousel-dot" data-index="1" aria-label="Show casual photo 1"></button>
+                <button class="carousel-dot" data-index="2" aria-label="Show casual photo 2"></button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

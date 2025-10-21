@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Add Project - Thomas Wilhoite{% endblock %}
+
+{% block content %}
+<h1>Add New Project</h1>
+
+<div class="add-project-content">
+    <form method="POST" class="add-project-form">
+        <div class="form-group">
+            <label for="title">Project Title *</label>
+            <input type="text" id="title" name="title" required 
+                   placeholder="Enter project title" 
+                   aria-describedby="title-help">
+            <div id="title-help" class="form-help">Enter a descriptive title for your project</div>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Project Description *</label>
+            <textarea id="description" name="description" required rows="6" 
+                      placeholder="Describe your project, its goals, technologies used, and key features..."
+                      aria-describedby="description-help"></textarea>
+            <div id="description-help" class="form-help">Provide a detailed description of your project</div>
+        </div>
+
+        <div class="form-group">
+            <label for="image_filename">Image Filename *</label>
+            <input type="text" id="image_filename" name="image_filename" required 
+                   placeholder="e.g., my-project-screenshot.png" 
+                   aria-describedby="image-help">
+            <div id="image-help" class="form-help">
+                Enter the filename of the image (must be in static/images folder). 
+                <br>Available images: 
+                <ul>
+                    <li>AI Tutor Dashboard.png</li>
+                    <li>AI Tutor Pic 2.png</li>
+                    <li>1Research.png</li>
+                    <li>Headshot.jpeg</li>
+                    <li>IMG_5533.jpeg</li>
+                    <li>IMG_6441.jpeg</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Add Project</button>
+            <a href="{{ url_for('projects') }}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

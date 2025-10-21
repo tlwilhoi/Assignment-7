@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Thank You - Thomas Wilhoite{% endblock %}
+
+{% block content %}
+<div class="thank-you-content">
+    <h1>Thank You!</h1>
+    <div class="success-message">
+        <p>Your message has been successfully sent. I'll get back to you as soon as possible.</p>
+        <p>I appreciate you taking the time to reach out and look forward to connecting with you.</p>
+    </div>
+    <div class="thank-you-actions">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Return to Home</a>
+    </div>
+</div>
+{% endblock %}

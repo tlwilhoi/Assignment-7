@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Thomas Wilhoite{% endblock %}
+
+{% block content %}
+<h1>Contact</h1>
+
+<div class="contact-content">
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <h2>Get In Touch</h2>
+        <p>I'm always interested in new opportunities and collaborations. Feel free to reach out through any of the channels below.</p>
+        
+        <div class="contact-methods">
+            <div class="contact-method">
+                <h3 id="email-contact">Email</h3>
+                <p><a href="mailto:tlwilhoi@iu.edu" aria-labelledby="email-contact">tlwilhoi@iu.edu</a></p>
+            </div>
+            
+            <div class="contact-method">
+                <h3>LinkedIn</h3>
+                <p><a href="https://www.linkedin.com/in/thomaswilhoite/" target="_blank" rel="noopener noreferrer">linkedin.com/in/thomaswilhoite</a></p>
+            </div>
+            
+            <div class="contact-method">
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/tlwilhoi" target="_blank" rel="noopener noreferrer">github.com/tlwilhoi</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <h2>Send a Message</h2>
+        <form id="contact-form" class="contact-form" action="{{ url_for('contact') }}" method="post" aria-label="Contact form">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required aria-describedby="firstName-error">
+                <div id="firstName-error" class="error-message" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required aria-describedby="lastName-error">
+                <div id="lastName-error" class="error-message" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                <div id="email-error" class="error-message" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password * (minimum 8 characters)</label>
+                <input type="password" id="password" name="password" required minlength="8" aria-describedby="password-error">
+                <div id="password-error" class="error-message" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password *</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required aria-describedby="confirmPassword-error">
+                <div id="confirmPassword-error" class="error-message" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" aria-describedby="form-instructions">Send Message</button>
+            <div id="form-instructions" class="sr-only">All fields marked with asterisk are required.</div>
+        </form>
+    </section>
+</div>
+{% endblock %}

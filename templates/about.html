@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}About - Thomas Wilhoite{% endblock %}
+
+{% block content %}
+<h1>About Me</h1>
+
+<div class="about-content">
+    <div class="about-text">
+        <p>I'm a Master of Science in Information Systems (MSIS) student at the Kelley School of Business, where I blend research, analytics, and systems thinking to solve complex problems and create meaningful connections. I'm driven by curiosity and collaboration, with a belief that technology should be as human as it is innovative.</p>
+
+        <p>My professional interests center on using technology to enable smarter, more adaptive organizations. Whether through systems analysis, technology consulting, or data-driven strategy, I love bridging the gap between people and tech to make ideas tangible and impactful.</p>
+
+        <p>Outside of academics and work, I'm big on balance — I love to lift, run, and spend time outdoors to clear my head. I'm also a fan of horror and indie films (the weirder, the better), and I never miss a chance to travel. Cusco has been my favorite destination so far, and I'm convinced New Orleans has the best food on the planet.</p>
+
+        <p>I'm always looking for new challenges and forward-thinking environments where I can help build solutions that make a real difference — and enjoy the journey along the way.</p>
+    </div>
+    
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/Headshot.jpeg') }}" alt="Professional portrait of Thomas Wilhoite, MSIS student at Kelley School of Business, in a professional setting" class="profile-photo">
+    </div>
+</div>
+{% endblock %}
