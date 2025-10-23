@@ -4,10 +4,8 @@
     "dockerfile": "../Dockerfile",
     "context": ".."
   },
-  "workspaceFolder": "/workspace",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspaces/Assignment-7",
   "forwardPorts": [5000],
   "postCreateCommand": "pip install -r requirements.txt || true",
-  "postStartCommand": "python app.py &",
   "remoteUser": "vscode"
 }
